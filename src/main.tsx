@@ -62,18 +62,18 @@ const Application: FunctionComponent = () => {
 
   const [activeTab, setActiveTab] = useState(0)
 
-  const onSearchValChange = (e) => {
+  const onSearchValChange = (e: any) => {
     setSearchVal(e.target.value)
   }
 
-  const onSearchSubmit = (e) => {
+  const onSearchSubmit = (e: any) => {
     e.preventDefault()
     console.log('submitting')
     setUsername(searchVal)
   }
 
   const { isLoading, profile, error } = useUserProfile({
-    username,
+    username: username,
     apiKey: config.apiKey,
   })
 
