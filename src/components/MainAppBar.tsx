@@ -1,16 +1,26 @@
-import React from "react";
-import { AppBar, Toolbar, IconButton, makeStyles } from "@material-ui/core";
-import MenuIcon from "@material-ui/icons/Menu";
-import { UserSearchInput } from "./UserSearchInput";
+import React from 'react'
+import { AppBar, Toolbar, IconButton, makeStyles } from '@material-ui/core'
+import MenuIcon from '@material-ui/icons/Menu'
+import { UserSearchInput } from './UserSearchInput'
 
 const useStyles = makeStyles((theme) => ({
   root: {
     paddingBottom: theme.spacing(2),
   },
-}));
+}))
 
-const MainAppBar = () => {
-  const classes = useStyles();
+type MainAppBarProps = {
+  searchVal: String
+  onSearchSubmit: Function
+  onSearchValChange: Function
+}
+
+const MainAppBar = ({
+  searchVal,
+  onSearchSubmit,
+  onSearchValChange,
+}: MainAppBarProps) => {
+  const classes = useStyles()
 
   return (
     <AppBar position="static" className={classes.root}>
@@ -19,13 +29,13 @@ const MainAppBar = () => {
           <MenuIcon />
         </IconButton>
         <UserSearchInput
-          value={""}
-          onChange={console.log}
-          onSubmit={console.log}
+          value={searchVal}
+          onChange={onSearchValChange}
+          onSubmit={onSearchSubmit}
         />
       </Toolbar>
     </AppBar>
-  );
-};
+  )
+}
 
-export { MainAppBar };
+export { MainAppBar }

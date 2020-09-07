@@ -1,7 +1,7 @@
-import React, { useState, FunctionComponent } from "react";
-import { render } from "react-dom";
-import { useUserProfile } from "./hooks/useUserProfile";
-import { config } from "./config";
+import React, { useState, FunctionComponent } from 'react'
+import { render } from 'react-dom'
+import { useUserProfile } from './hooks/useUserProfile'
+import { config } from './config'
 import {
   Container,
   Avatar,
@@ -13,12 +13,12 @@ import {
   Tab,
   Card,
   CardContent,
-} from "@material-ui/core";
+} from '@material-ui/core'
 
-import { MainAppBar } from "./components/MainAppBar";
-import { UserScore } from "./components/UserScore";
-import { UserRank } from "./components/UserRank";
-import { GameCard } from "./components/GameCard";
+import { MainAppBar } from './components/MainAppBar'
+import { UserScore } from './components/UserScore'
+import { UserRank } from './components/UserRank'
+import { GameCard } from './components/GameCard'
 
 const useStyles = makeStyles((theme) => ({
   infoCard: {
@@ -40,9 +40,9 @@ const useStyles = makeStyles((theme) => ({
   content: {
     marginTop: theme.spacing(1),
   },
-}));
+}))
 
-const navigationTabs = ["Recent", "Friends", "About"];
+const navigationTabs = ['Recent', 'Friends', 'About']
 
 const RecentlyPlayedGames = ({ games = [], username }: any) => {
   return (
@@ -51,24 +51,40 @@ const RecentlyPlayedGames = ({ games = [], username }: any) => {
         <GameCard game={game} username={username} key={index} />
       ))}
     </div>
-  );
-};
+  )
+}
 
 const Application: FunctionComponent = () => {
-  const username = "noot";
-  const classes = useStyles();
+  const [username, setUsername] = useState('noot')
+  const [searchVal, setSearchVal] = useState('')
 
-  const [activeTab, setActiveTab] = useState(0);
+  const classes = useStyles()
+
+  const [activeTab, setActiveTab] = useState(0)
+
+  const onSearchValChange = (e) => {
+    setSearchVal(e.target.value)
+  }
+
+  const onSearchSubmit = (e) => {
+    e.preventDefault()
+    console.log('submitting')
+    setUsername(searchVal)
+  }
 
   const { isLoading, profile, error } = useUserProfile({
     username,
     apiKey: config.apiKey,
-  });
+  })
 
   return (
     <div>
       <CssBaseline />
-      <MainAppBar />
+      <MainAppBar
+        searchVal={searchVal}
+        onSearchSubmit={onSearchSubmit}
+        onSearchValChange={onSearchValChange}
+      />
       <Box
         className={classes.infoCard}
         display="flex"
@@ -80,9 +96,9 @@ const Application: FunctionComponent = () => {
         <Avatar
           className={classes.avatar}
           alt={username}
-          src={profile ? profile.avatar : ""}
+          src={profile ? profile.avatar : ''}
         />
-        <Typography variant="h4">{profile ? profile.username : ""}</Typography>
+        <Typography variant="h4">{profile ? profile.username : ''}</Typography>
         {profile?.tagline && (
           <Typography variant="caption">{profile.tagline}</Typography>
         )}
@@ -99,8 +115,8 @@ const Application: FunctionComponent = () => {
         <Tabs
           value={activeTab}
           onChange={(e, newValue) => {
-            console.log(newValue);
-            setActiveTab(newValue);
+            console.log(newValue)
+            setActiveTab(newValue)
           }}
           className={classes.tabs}
         >
@@ -110,19 +126,19 @@ const Application: FunctionComponent = () => {
         </Tabs>
       </Box>
       <Container className={classes.content}>
-        {navigationTabs[activeTab] === "Recent" && (
+        {navigationTabs[activeTab] === 'Recent' && (
           <RecentlyPlayedGames
             games={profile?.recentlyPlayed}
             username={username}
           />
         )}
 
-        {navigationTabs[activeTab] === "Friends" && <div>friends</div>}
+        {navigationTabs[activeTab] === 'Friends' && <div>friends</div>}
 
-        {navigationTabs[activeTab] === "About" && <div>about</div>}
+        {navigationTabs[activeTab] === 'About' && <div>about</div>}
       </Container>
     </div>
-  );
-};
+  )
+}
 
-render(<Application />, document.getElementById("root"));
+render(<Application />, document.getElementById('root'))
