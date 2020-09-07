@@ -15,7 +15,7 @@ import {
   CardContent,
 } from "@material-ui/core";
 
-import { MainNavigation } from "./components/MainNavigation";
+import { MainAppBar } from "./components/MainAppBar";
 import { UserScore } from "./components/UserScore";
 import { UserRank } from "./components/UserRank";
 import { GameCard } from "./components/GameCard";
@@ -68,7 +68,7 @@ const Application: FunctionComponent = () => {
   return (
     <div>
       <CssBaseline />
-      <MainNavigation />
+      <MainAppBar />
       <Box
         className={classes.infoCard}
         display="flex"
