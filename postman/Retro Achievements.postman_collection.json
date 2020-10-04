@@ -1,0 +1,525 @@
+{
+	"info": {
+		"_postman_id": "02f90af8-a052-448f-ae31-69b6b1dcbd5c",
+		"name": "Retro Achievements",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Recently played games",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetUserRecentlyPlayedGames.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&c=10&offset=0&u=noot",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetUserRecentlyPlayedGames.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "c",
+							"value": "10",
+							"description": "How many games to return"
+						},
+						{
+							"key": "offset",
+							"value": "0",
+							"description": "Offset from beginning"
+						},
+						{
+							"key": "u",
+							"value": "noot",
+							"description": "The queried user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET User summary",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetUserSummary.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&g=10&u=noot",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetUserSummary.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "g",
+							"value": "10",
+							"description": "The number of games"
+						},
+						{
+							"key": "u",
+							"value": "noot",
+							"description": "The queried user"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Console ids",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetConsoleIDs.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetConsoleIDs.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Top ten users",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetTopTenUsers.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetTopTenUsers.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Game info",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetGame.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&i=1",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetGame.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "i",
+							"value": "1",
+							"description": "The game id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Extended game info",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetGameExtended.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&i=1",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetGameExtended.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "i",
+							"value": "1",
+							"description": "The game id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Game list",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetGameList.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&i=1",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetGameList.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "i",
+							"value": "1",
+							"description": "The console id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET User feed",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetFeed.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&u=noot&c=10&o=0",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetFeed.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "u",
+							"value": "noot",
+							"description": "The username to get the feed for"
+						},
+						{
+							"key": "c",
+							"value": "10",
+							"description": "How many feed items to return"
+						},
+						{
+							"key": "o",
+							"value": "0",
+							"description": "Offset"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET User rank and score",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetUserRankAndScore.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&u=noot",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetUserRankAndScore.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "u",
+							"value": "noot",
+							"description": "The username"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Game info and user progress",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetGameInfoAndUserProgress.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&u=noot&g=1",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetGameInfoAndUserProgress.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "u",
+							"value": "noot",
+							"description": "username"
+						},
+						{
+							"key": "g",
+							"value": "1",
+							"description": "game id"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Achievements earned on day",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetAchievementsEarnedOnDay.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&u=noot&d=2020-10-03",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetAchievementsEarnedOnDay.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "u",
+							"value": "noot",
+							"description": "user"
+						},
+						{
+							"key": "d",
+							"value": "2020-10-03",
+							"description": "date in format of yyyy-mm-dd"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Achievements earned between",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://retroachievements.org/API/API_GetAchievementsEarnedBetween.php?z=noot&y=WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF&u=noot&f=1601503200&t=1601762400",
+					"protocol": "https",
+					"host": [
+						"retroachievements",
+						"org"
+					],
+					"path": [
+						"API",
+						"API_GetAchievementsEarnedBetween.php"
+					],
+					"query": [
+						{
+							"key": "z",
+							"value": "noot",
+							"description": "API user"
+						},
+						{
+							"key": "y",
+							"value": "WlTIDmee2lK0Z0EAIeBexOr0AKvXd1qF",
+							"description": "API key"
+						},
+						{
+							"key": "u",
+							"value": "noot",
+							"description": "user"
+						},
+						{
+							"key": "f",
+							"value": "1601503200",
+							"description": "from unix timestamp"
+						},
+						{
+							"key": "t",
+							"value": "1601762400",
+							"description": "to unix timestamp"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
