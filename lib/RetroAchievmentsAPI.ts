@@ -1,8 +1,33 @@
+/**
+ * @param Score - The user's score
+ * @param Rank - The user's rank
+ *
+ * @remark
+ * Score and rank are inconsistent in how they are returned from the API between methods.
+ */
 interface UserRankAndScore {
   Score: number | string
   Rank: number | string
 }
 
+/**
+ * @param Title - The title of the gmae
+ * @param ForumTopicID - The ID of the forum topic for the game
+ * @param ConsoleID - The ID of the console the game is for
+ * @param ConsoleName - The name of the console the game is for
+ * @param Flags
+ * @param ImageIcon - The relative path of the game's image icon
+ * @param GameIcon - The relative path to the game's icon
+ * @param ImageTitle
+ * @param ImageIngame
+ * @param ImageBoxArt
+ * @param Publisher
+ * @param Developer
+ * @param Genre
+ * @param Released
+ * @param GameTitle
+ * @param Console
+ */
 interface GameInfo {
   Title: string
   ForumTopicID: string | number
@@ -22,6 +47,13 @@ interface GameInfo {
   Console: string
 }
 
+/**
+ * @param Title - The title of the game
+ * @param ID
+ * @param ConsoleID - The ID of the console the game is for
+ * @param ImageIcon
+ * @param ConsoleName - The name of the console the game is for
+ */
 interface GameListGame {
   Title: string
   ID: string
@@ -30,6 +62,16 @@ interface GameListGame {
   ConsoleName: string
 }
 
+/**
+ * @param ID
+ * @param Title - The title of the game
+ * @param IsFinal
+ * @param RichPresencePatch
+ * @param NumAchievements
+ * @param NumDistinctPlayersCasual
+ * @param NumDistinctPlayersHardcore
+ * @param Achievements
+ */
 interface ExtendedGameInfo extends GameInfo {
   ID: number
   Title: string
@@ -41,17 +83,39 @@ interface ExtendedGameInfo extends GameInfo {
   Achievements: any
 }
 
+/**
+ * @param "1"
+ * @param "2"
+ * @param "3"
+ */
 interface TopTenUser {
   '1': string
   '2': string
   '3': string
 }
 
+/**
+ * @param ID - The ID of the console
+ * @param Name - The name of the console
+ */
 interface ConsoleID {
   ID: string
   Name: string
 }
 
+/**
+ * @param GameID - The ID of the game
+ * @param ConsoleID - The ID of the console that the game of is for
+ * @param ConsoleName - The name of the console that the game is for
+ * @param Title - The name of the game
+ * @param ImageIcon
+ * @param LastPlayed
+ * @param MyVote
+ * @param NumPossibleAchievements
+ * @param PossibleScore
+ * @param NumAchieved
+ * @param ScoreAchieved
+ */
 interface RecentlyPlayedGame {
   GameID: string
   ConsoleID: string
@@ -65,6 +129,10 @@ interface RecentlyPlayedGame {
   NumAchieved: string
   ScoreAchieved: string
 }
+
+/**
+ * Provides an entry point into the RetroAchievements API
+ */
 class RetroAchievementsAPI {
   _apiKey: string
   _apiUser: string
